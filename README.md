@@ -1,15 +1,15 @@
 # poppetex.github.io
-##The Tea Cozy
+##The Tea Cozy##
 
 
-###Main
+###Main###
 - Mission
 
-###Section
+###Section###
 - Types of Teas
 
-###Section
+###Section###
 - Locations
 
-###Footer
+###Footer###
 - Contact
