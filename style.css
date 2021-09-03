@@ -50,7 +50,7 @@ header {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    line-height: 0.4em;
+    line-height: 1em;
     padding-top: 10px; padding-bottom: 20px;
 
 }
@@ -85,7 +85,7 @@ header {
 }
 
 .locations {
-    position: relative;;
+    position: relative;
 }
 
 .locations img {
@@ -96,23 +96,19 @@ header {
     filter: blur(3px);
 }
 
-#locations_title {
-    /* position: absolute; */
-    margin: 0;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.locations h3 {
+    text-decoration: underline;
+}
 
-    text-shadow: black 1px 0 10px;
+#locations_title {
+    text-align: center;
 }
 
 .locations_boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 75%;
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -124,9 +120,54 @@ header {
     background-color: black;
     width: 300px;
     text-align: center;
+    margin: 5px 0;
 }
 
 
 footer .info {
     text-align: center;
+}
+
+
+
+/* ADD 17PX to VALUE LISTED AT INSPECT WEBPAGE */
+@media screen and (max-width: 1200px) {
+    .header {width: 70%;}
+    .locations img {width: 100%;}
+}
+
+@media screen and (max-width: 1060px) {
+    .mission img {width: 100%; height: auto;}
+}
+
+@media screen and (max-width: 1000px) {
+    .tea_types {width: 650px;}
+}
+
+@media screen and (max-width: 830px) {
+    .locations_boxes .single_location {width: 250px;}
+}
+
+@media screen and (max-width: 785px) {
+    .header {font-size: 0.6em;}
+}
+
+@media screen and (max-width: 700px) {
+    .locations_boxes {width: 90%;}
+    .tea_types {width: 350px;}
+}
+
+@media screen and (max-width: 600px) {
+    .header {width: 60%;}
+    .locations img {height: 700px; margin-bottom: 10px;}
+}
+
+@media screen and (max-width: 475px) {
+    .header {width: 100%; display: inline-flex;}
+    .tea_types {width: 100%;}
+}
+
+@media screen and (max-width: 310px) {
+    .mission_banner {width: 290px; position: relative;}
+    .header {text-align: center; line-height: 2em;}
 }
