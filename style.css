@@ -1,0 +1,132 @@
+body {
+    background-color: black;
+    color: seashell;
+    /* font-family: Helvetica, Arial, sans-serif; */
+    font-family: 'Nunito', sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+header {
+    border-bottom: 1px solid seashell;
+    height: 70px;
+}
+
+#logo {
+    display: inline-flex;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.header {
+    display: inline-flex;
+    width: 40%;
+    justify-content: space-around;
+    float: right;
+    text-decoration: underline;
+    opacity: 0.8;
+    line-height: 0.4em;
+}
+
+.mission {
+    position: relative;
+}
+
+.mission img {
+    display: block;
+    margin: 0 auto;
+    height: 700px;
+    filter: blur(3px);
+}
+
+.mission_banner {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    line-height: 0.4em;
+    padding-top: 10px; padding-bottom: 20px;
+
+}
+
+.tea_types {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tea_types h2 {
+    line-height: 0.3em;
+}
+
+.tea_types .tea_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.tea_images .type_of_tea h3 {
+    text-align: center;
+    line-height: 0;
+    margin-bottom: 60px;
+}
+
+.tea_types img {
+    width: 300px;
+    height: 200px;
+    margin: 0px 10px;
+}
+
+.locations {
+    position: relative;;
+}
+
+.locations img {
+    display: block;
+    height: 500px;
+    width: 1200px;
+    margin: 0 auto;
+    filter: blur(3px);
+}
+
+#locations_title {
+    /* position: absolute; */
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    text-shadow: black 1px 0 10px;
+}
+
+.locations_boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.locations_boxes .single_location {
+    background-color: black;
+    width: 300px;
+    text-align: center;
+}
+
+
+footer .info {
+    text-align: center;
+}
