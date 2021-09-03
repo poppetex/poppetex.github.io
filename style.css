@@ -1,7 +1,6 @@
 body {
     background-color: black;
     color: seashell;
-    /* font-family: Helvetica, Arial, sans-serif; */
     font-family: 'Nunito', sans-serif;
 }
 
@@ -127,6 +126,7 @@ header {
 footer .info {
     text-align: center;
 }
+
 
 
 
