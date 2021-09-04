@@ -16,10 +16,10 @@ const menu = {
         order: 'Green Tea',
         cost: 0.5
     },
-    'snacks-and-drinks': {
-        order: 'Snacks and Drinks',
-        cost: 1.25
-    }
+    // 'snacks-and-drinks': {
+    //     order: 'Snacks and Drinks',
+    //     cost: 'TBD'
+    // }
 }
 
 // function sendText(order, cost) {
@@ -44,42 +44,38 @@ function sendEmail(name){
 
 const form = document.getElementById("drink_form");
 
-form.addEventListener("submit", () => {
+form.addEventListener("submit", (event) => {
     const drinkTypeEl = document.getElementById("type_of_drink");
     const amountEl = document.getElementById("amount");
     const nameEl = document.getElementById("order_by")
-    // const phoneEl = document.getElementById("phone");
 
     const drinkType = drinkTypeEl.value;
     const amount = amountEl.value;
     const name = nameEl.value;
-    // const phoneNumber = phoneEl.value;
 
-    // console.log(drinkType);
-    // console.log(amount);
+    // let costPerDrink = 0;
 
-    let costPerDrink = 0;
-
-    switch(drinkType) {
-        case 'masala-chai':
-            costPerDrink = menu[drinkType].cost;
-            break;
-        case 'black-coffee':
-            costPerDrink = menu[drinkType].cost;
-            break;
-        case 'coffee-shake':
-            costPerDrink = menu[drinkType].cost;
-            break;
-        case 'green-tea':
-            costPerDrink = menu[drinkType].cost;
-            break;
-        case 'snack-and-drinks':
-            costPerDrink = menu[drinkType].cost;
-            break;
-        default:
-            alert("Something went wrong. Please try again");
-            throw error("Something went wrong");
-    }
+    // switch(drinkType) {
+    //     case 'masala-chai':
+    //         costPerDrink = menu[drinkType].cost;
+    //         break;
+    //     case 'black-coffee':
+    //         costPerDrink = menu[drinkType].cost;
+    //         break;
+    //     case 'coffee-shake':
+    //         costPerDrink = menu[drinkType].cost;
+    //         break;
+    //     case 'green-tea':
+    //         costPerDrink = menu[drinkType].cost;
+    //         break;
+    //     case 'snack-and-drinks':
+    //         costPerDrink = menu[drinkType].cost;
+    //         break;
+    //     default:
+    //         alert("Something went wrong. Please try again");
+    //         throw error("Something went wrong");
+    // }
+    const costPerDrink = menu[drinkType].cost;
 
     function calculateCost(perDrink, amt) {
         return (perDrink * amt).toFixed(2);
@@ -88,7 +84,7 @@ form.addEventListener("submit", () => {
     const totalCost = calculateCost(costPerDrink, amount);
     document.getElementById("cost_span").innerHTML = totalCost;
 
-    sendEmail(`Name: ${name}. Type: ${drinkType}. Cost: $${totalCost}`);
+    sendEmail(`Name: ${name}. Type: ${drinkType}. Amount: ${amount}. Cost: $${totalCost}.`);
     event.preventDefault();
 
     const returnButton = document.getElementById("return_home");
