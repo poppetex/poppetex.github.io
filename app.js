@@ -71,7 +71,7 @@ form.addEventListener("submit", (event) => {
     const totalCost = calculateCost(costPerDrink, amount, tip);
     document.getElementById("cost_span").innerHTML = totalCost;
 
-    // sendEmail(`Name: ${name}. Type: ${drinkType}. Amount: ${amount}. Cost: $${totalCost}.`);
+    sendEmail(`Name: ${name}. Type: ${drinkType}. Amount: ${amount}. Cost: $${totalCost}.`);
 
     const returnButton = document.getElementById("return_home");
     returnButton.style.display = 'initial';
