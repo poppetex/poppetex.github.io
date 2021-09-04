@@ -1,4 +1,3 @@
-
 const menu = {
     'masala-chai': {
         order: 'Masala Chai',
@@ -15,25 +14,12 @@ const menu = {
     'green-tea': {
         order: 'Green Tea',
         cost: 0.5
-    },
-    // 'snacks-and-drinks': {
-    //     order: 'Snacks and Drinks',
-    //     cost: 'TBD'
-    // }
+    }
 }
 
-// function sendText(order, cost) {
-//     // Send the text message.
-//     client.messages.create({
-//         to: '856-912-3795',
-//         from: '856-912-3795',
-//         body: 'Hello from Twilio!'
-//     });
-// }
-
-function sendEmail(name){
+function sendEmail(body){
     emailjs.init("user_6tWjYXKH7CNG8k5CyrOJ5");
-    emailjs.send('service_y41aamj', 'template_tz1if4u', {name: name})
+    emailjs.send('service_y41aamj', 'template_tz1if4u', {name: body})
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
         }, function(error) {
@@ -53,28 +39,6 @@ form.addEventListener("submit", (event) => {
     const amount = amountEl.value;
     const name = nameEl.value;
 
-    // let costPerDrink = 0;
-
-    // switch(drinkType) {
-    //     case 'masala-chai':
-    //         costPerDrink = menu[drinkType].cost;
-    //         break;
-    //     case 'black-coffee':
-    //         costPerDrink = menu[drinkType].cost;
-    //         break;
-    //     case 'coffee-shake':
-    //         costPerDrink = menu[drinkType].cost;
-    //         break;
-    //     case 'green-tea':
-    //         costPerDrink = menu[drinkType].cost;
-    //         break;
-    //     case 'snack-and-drinks':
-    //         costPerDrink = menu[drinkType].cost;
-    //         break;
-    //     default:
-    //         alert("Something went wrong. Please try again");
-    //         throw error("Something went wrong");
-    // }
     const costPerDrink = menu[drinkType].cost;
 
     function calculateCost(perDrink, amt) {
