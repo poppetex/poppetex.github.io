@@ -4,6 +4,22 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+a {
+    /* color: white; */
+    text-decoration: underline;
+    color: rgb(190, 228, 252);
+}
+
+.order_button {
+    background-color: rgb(190, 228, 252);
+    /* border: 5px solid rgb(190, 228, 252); */
+    padding: 10px 20px;
+    border-radius: 1em;
+    text-decoration: none;
+    color: rgb(95, 37, 37);
+    border: 5px solid rgb(95, 37, 37);
+}
+
 h2 {
     font-size: 2em;
 }
@@ -22,7 +38,7 @@ header {
 
 .header {
     display: inline-flex;
-    width: 40%;
+    width: 60%;
     justify-content: space-around;
     float: right;
     text-decoration: underline;
@@ -83,6 +99,26 @@ header {
     margin: 0px 10px;
 }
 
+.chefs {
+    text-align: center;
+}
+
+.chefs h2 {
+    line-height: 0.8em;
+}
+
+.chefs_layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chefs img {
+    width: 300px;
+    height: 300px;
+    margin: 0px 80px;
+}
+
 .locations {
     position: relative;
 }
@@ -130,9 +166,10 @@ footer .info {
 
 
 
+
 /* ADD 17PX to VALUE LISTED AT INSPECT WEBPAGE */
 @media screen and (max-width: 1200px) {
-    .header {width: 70%;}
+    .header {width: 90%;}
     .locations img {width: 100%;}
 }
 
@@ -142,6 +179,10 @@ footer .info {
 
 @media screen and (max-width: 1000px) {
     .tea_types {width: 650px;}
+}
+
+@media screen and (min-width: 980px) {
+    .tea_types h2 {margin-top: 90px;}
 }
 
 @media screen and (max-width: 830px) {
@@ -158,7 +199,7 @@ footer .info {
 }
 
 @media screen and (max-width: 600px) {
-    .header {width: 60%;}
+    .header {width: 90%;}
     .locations img {height: 700px; margin-bottom: 10px;}
 }
 
@@ -170,4 +211,55 @@ footer .info {
 @media screen and (max-width: 310px) {
     .mission_banner {width: 290px; position: relative;}
     .header {text-align: center; line-height: 2em;}
+}
+
+
+
+/* Drinks Order Page */
+
+main {
+  height: 600px;
+  position: relative;
+  font-size: 1.3em;
+}
+
+.order_page_h2 {
+    text-align: center;
+}
+
+.drink_form {
+    border: 5px solid rgb(191, 226, 248);
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 10px 50px;
+    border-radius: 0.5em;
+}
+
+.drink_form label {
+    float: left;
+}
+
+.drink_form input, .drink_form select {
+    float: right;
+    font-size: 1em;
+}
+
+#submit_order {
+    background-color: rgba(191, 226, 248, 0.473);
+    color: white;
+    padding: 5px 20%;
+    font-family: 'Nunito';  
+}
+
+#submit_order:hover {
+    background-color: lightyellow;
+    color: black;
+}
+
+#return_home {
+    display: none;
 }

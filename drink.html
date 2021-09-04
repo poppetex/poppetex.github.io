@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order Drink</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+
+
+    </head>
+
+    <body>
+        <!-- <head class="order_page_head">
+            <h2 class="order_page_h2">Place Your Order Here!</h2>
+        </head> -->
+
+        <main>
+            <form class="drink_form" id="drink_form">
+                <h2 class="order_page_h2">Place Your Order Here!</h2>
+                <hr>
+                <br>
+                <label for="type_of_drink">Drink Type:</label>
+                <select id="type_of_drink" name="type_of_drink" required>
+                    <option value="masala-chai">Masala Chai</option>
+                    <option value="black-coffee">Black Coffee</option>
+                    <option value="coffee-shake">Coffee Shake</option>
+                    <option value="green-tea">Green Tea</option>
+                    <option value="snacks-and-drinks">Snacks and Drinks</option>
+                </select>
+                <br>
+                <br>
+
+                <label for="amount">Amount:</label>
+                <input type="number" name="amount" id="amount" min="1" max="5" required>
+                <br>
+                <br>
+
+                <label for="order_by">Name:</label>
+                <input type="text" name="order_by" id="order_by" required>
+                <br>
+
+                <!-- <label for="phone">Phone Number: </label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <br> -->
+                <br>
+                <input type="submit" value="Order" id="submit_order">
+                <label>*Please only submit once!*</label>
+                <br>
+                <br>
+                <hr>   
+
+                
+                <h2 class="order_page_h2">Cost: $ <span id="cost_span">0.00</span></h2>
+                <h3><a id="return_home" href="./order_page.html">Return to home</a></h3>
+            </form>
+
+    
+        </main>
+        
+        <script src="app.js" charset="utf-8" defer></script>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+        </script>
+        </script>
+    </body>
+</html>
