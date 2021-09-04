@@ -18,10 +18,13 @@
                 <br>
                 <label for="type_of_drink">Drink Type:</label>
                 <select id="type_of_drink" name="type_of_drink" required>
-                    <option value="masala-chai">Masala Chai</option>
-                    <option value="black-coffee">Black Coffee</option>
-                    <option value="coffee-shake">Coffee Shake</option>
-                    <option value="green-tea">Green Tea</option>
+                    <option value="blank"></option>
+                    <option value="masala-chai">Masala Chai - $0.75</option>
+                    <option value="black-coffee">Black Coffee - $0.50</option>
+                    <option value="coffee-shake">Coffee Shake - $0.75</option>
+                    <option value="green-tea">Green Tea - $0.50</option>
+                    <option value="beer">Beer - $1.25</option>
+                    <option value="scotch">Scotch - $1.50</option>
                     <!-- <option value="snacks-and-drinks">More Coming Soon!</option> -->
                 </select>
                 <br>
@@ -35,10 +38,12 @@
                 <label for="order_by">Name:</label>
                 <input type="text" name="order_by" id="order_by" required>
                 <br>
+                <br>
 
-                <!-- <label for="phone">Phone Number: </label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                <br> -->
+                <label for="tip">Tip %:</label>
+                <input type="number" name="tip" id="tip" min="0" step="5">
+                <br>
+                <br>
                 <br>
                 <input type="submit" value="Order" id="submit_order">
                 <label>*Please only submit once!*</label>
@@ -47,7 +52,7 @@
                 <hr>   
 
                 
-                <h2 class="order_page_h2">Cost: $ <span id="cost_span">0.00</span></h2>
+                <h2 class="order_page_h2">Total: $<span id="cost_span">0.00</span></h2>
                 <h3><a id="return_home" href="./index.html">Return to home</a></h3>
             </form>
 

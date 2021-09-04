@@ -170,7 +170,6 @@ footer .info {
 
 
 
-
 /* ADD 17PX to VALUE LISTED AT INSPECT WEBPAGE */
 @media screen and (max-width: 1200px) {
     .header {width: 90%;}
@@ -235,10 +234,10 @@ main {
     border: 5px solid rgb(191, 226, 248);
     width: 600px;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
     padding: 10px 50px;
     border-radius: 0.5em;
 }
@@ -255,7 +254,6 @@ main {
 }
 
 #submit_order {
-    /* background-color: rgba(191, 226, 248, 0.473); */
     background-image: linear-gradient(to bottom right, rgb(6, 64, 100), rgb(172, 201, 219));
     color: white;
     padding: 5px 20%;
@@ -269,6 +267,11 @@ main {
 
 #return_home {
     display: none;
+    text-decoration: underline;
+}
+
+#return_home:hover {
+    color: lightpink;
 }
 
 #cost_span {

@@ -1,7 +1,7 @@
 const menu = {
     'masala-chai': {
         order: 'Masala Chai',
-        cost: 1
+        cost: 0.75
     }, 
     'black-coffee': {
         order: 'Black Coffee',
@@ -9,11 +9,19 @@ const menu = {
     },
     'coffee-shake': {
         order: 'Coffee Shake',
-        cost: 1
+        cost: 0.75
     },
     'green-tea': {
         order: 'Green Tea',
         cost: 0.5
+    },
+    'beer': {
+        order: 'Beer',
+        cost: 1.25
+    },
+    'scotch': {
+        order: 'Scotch',
+        cost: 1.5
     }
 }
 
@@ -33,24 +41,41 @@ const form = document.getElementById("drink_form");
 form.addEventListener("submit", (event) => {
     const drinkTypeEl = document.getElementById("type_of_drink");
     const amountEl = document.getElementById("amount");
-    const nameEl = document.getElementById("order_by")
+    const nameEl = document.getElementById("order_by");
+    const tipEl = document.getElementById("tip");
+    console.log(tipEl);
 
     const drinkType = drinkTypeEl.value;
     const amount = amountEl.value;
     const name = nameEl.value;
+    let tip;
+    if(!tipEl.value) {
+        tip = 0;
+    } else {
+        tip = tipEl.value / 100;
+    }
+
+    if(drinkType == 'blank') {
+        alert("Please choose a drink.");
+        event.preventDefault();
+    }
 
     const costPerDrink = menu[drinkType].cost;
 
-    function calculateCost(perDrink, amt) {
-        return (perDrink * amt).toFixed(2);
+    function calculateCost(perDrink, amt, tip) {
+        const preTip = perDrink * amt;
+        const total = preTip * (1 + tip);
+        return total.toFixed(2);
     }    
 
-    const totalCost = calculateCost(costPerDrink, amount);
+    const totalCost = calculateCost(costPerDrink, amount, tip);
     document.getElementById("cost_span").innerHTML = totalCost;
 
-    sendEmail(`Name: ${name}. Type: ${drinkType}. Amount: ${amount}. Cost: $${totalCost}.`);
-    event.preventDefault();
+    // sendEmail(`Name: ${name}. Type: ${drinkType}. Amount: ${amount}. Cost: $${totalCost}.`);
 
     const returnButton = document.getElementById("return_home");
     returnButton.style.display = 'initial';
+
+    alert(`You placed your order! Drink: ${menu[drinkType].order}. Amount ${amount}. Cost: $${totalCost}.`)
+    event.preventDefault();
 })
