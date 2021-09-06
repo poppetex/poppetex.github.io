@@ -2,6 +2,11 @@ body {
     background-color: black;
     color: seashell;
     font-family: 'Nunito', sans-serif;
+    /* font-size: 1.2em; */
+}
+
+h4, label {
+    font-size: 1.3em;
 }
 
 a {
@@ -10,12 +15,6 @@ a {
 }
 
 .order_button {
-    /* background-image: linear-gradient(to right, rgb(211, 95, 0), rgb(233, 229, 222));
-    padding: 10px 20px;
-    border-radius: 0.5em;
-    text-decoration: none;
-    color: black;
-    border: 5px solid rgb(99, 75, 75); */
     background-image: linear-gradient(to bottom right, rgb(207, 111, 0), rgb(245, 230, 190));
     filter: brightness(120%);
     color: black;
@@ -44,7 +43,6 @@ header {
     height: 50px;
     width: 50px;
     margin-left: 10px;
-    /* margin-top: 10px; */
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     border: 4px solid rgb(90, 126, 148);
@@ -82,9 +80,14 @@ header {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    line-height: 1em;
+    line-height: 1.1em;
     padding-top: 10px; padding-bottom: 30px;
+}
 
+.mission_banner h4 {
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 1.2em;
 }
 
 .tea_types {
@@ -185,7 +188,6 @@ header {
 }
 
 
-
 footer .info {
     text-align: center;
 }
@@ -193,55 +195,10 @@ footer .info {
 
 
 
-/* ADD 17PX to VALUE LISTED AT INSPECT WEBPAGE */
-@media screen and (max-width: 1200px) {
-    .header {width: 90%;}
-    .locations img {width: 100%;}
-}
 
-@media screen and (max-width: 1060px) {
-    .mission img {width: 100%; height: auto;}
-}
-
-@media screen and (max-width: 1000px) {
-    .tea_types {width: 650px;}
-}
-
-@media screen and (min-width: 980px) {
-    .tea_types h2 {margin-top: 90px;}
-}
-
-@media screen and (max-width: 830px) {
-    .locations_boxes .single_location {width: 250px;}
-}
-
-@media screen and (max-width: 785px) {
-    .header {font-size: 0.6em;}
-}
-
-@media screen and (max-width: 700px) {
-    .locations_boxes {width: 90%;}
-    .tea_types {width: 350px;}
-}
-
-@media screen and (max-width: 600px) {
-    .header {width: 90%;}
-    .locations img {height: 700px; margin-bottom: 10px;}
-}
-
-@media screen and (max-width: 475px) {
-    .header {width: 100%; display: inline-flex;}
-    .tea_types {width: 100%;}
-}
-
-@media screen and (max-width: 310px) {
-    .mission_banner {width: 290px; position: relative;}
-    .header {text-align: center; line-height: 2em;}
-}
-
-
-
-/* Drinks Order Page */
+/* 
+    ***Drinks Order Page***
+*/
 
 main {
   height: 600px;
@@ -302,5 +259,54 @@ main {
 }
 
 #cost_span {
-    color: green;
+    color: lightgreen;
+}
+
+
+
+
+/* ADD 17PX to VALUE LISTED AT INSPECT WEBPAGE */
+@media screen and (max-width: 1200px) {
+    .header {width: 90%;}
+    .locations img {width: 100%;}
+}
+
+@media screen and (max-width: 1060px) {
+    .mission img {width: 100%; height: auto;}
+}
+
+@media screen and (max-width: 1000px) {
+    .tea_types {width: 650px;}
+}
+
+@media screen and (min-width: 980px) {
+    .tea_types h2 {margin-top: 90px;}
+}
+
+@media screen and (max-width: 830px) {
+    .locations_boxes .single_location {width: 250px;}
+}
+
+@media screen and (max-width: 785px) {
+    .header {font-size: 0.6em;}
+}
+
+@media screen and (max-width: 700px) {
+    .locations_boxes {width: 90%;}
+    .tea_types {width: 350px;}
+}
+
+@media screen and (max-width: 600px) {
+    .header {width: 90%;}
+    .locations img {height: 700px; margin-bottom: 10px;}
+}
+
+@media screen and (max-width: 475px) {
+    .header {width: 100%; display: inline-flex;}
+    .tea_types {width: 100%;}
+}
+
+@media screen and (max-width: 310px) {
+    .mission_banner {width: 290px; position: relative;}
+    .header {text-align: center; line-height: 2em;}
 }
