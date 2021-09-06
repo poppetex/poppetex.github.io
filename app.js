@@ -22,6 +22,18 @@ const menu = {
     'scotch': {
         order: 'Scotch',
         cost: 1.5
+    },
+    'milk-coffee': {
+        order: 'Milk Coffee',
+        cost: 0.6
+    },
+    'coke': {
+        order: 'Coke',
+        cost: 0.4
+    },
+    'fbi': {
+        order: 'Fried Banana Ice Cream',
+        cost: 4
     }
 }
 
@@ -43,17 +55,13 @@ form.addEventListener("submit", (event) => {
     const amountEl = document.getElementById("amount");
     const nameEl = document.getElementById("order_by");
     const tipEl = document.getElementById("tip");
-    console.log(tipEl);
+    const instructionsEl = document.getElementById("additional_instructions");
 
     const drinkType = drinkTypeEl.value;
     const amount = amountEl.value;
     const name = nameEl.value;
-    let tip;
-    if(!tipEl.value) {
-        tip = 0;
-    } else {
-        tip = tipEl.value / 100;
-    }
+    const instructions = instructionsEl.value;
+    const tip = !tipEl.value ? 0 : tipEl.value / 100;
 
     if(drinkType == 'blank') {
         alert("Please choose a drink.");
@@ -71,11 +79,14 @@ form.addEventListener("submit", (event) => {
     const totalCost = calculateCost(costPerDrink, amount, tip);
     document.getElementById("cost_span").innerHTML = totalCost;
 
-    sendEmail(`Name: ${name}. Type: ${drinkType}. Amount: ${amount}. Cost: $${totalCost}.`);
+    sendEmail(`
+    Name: ${name}. Type: ${drinkType}. Amount: ${amount}. Cost: $${totalCost}.
+    Added Instructions: ${instructions}.
+    `);
 
     const returnButton = document.getElementById("return_home");
     returnButton.style.display = 'initial';
 
-    alert(`You placed your order! Drink: ${menu[drinkType].order}. Amount ${amount}. Cost: $${totalCost}.`)
+    alert(`You placed your order! Drink: ${menu[drinkType].order}. Amount ${amount}. Cost: $${totalCost}.`);
     event.preventDefault();
 })

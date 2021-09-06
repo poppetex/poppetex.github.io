@@ -21,16 +21,19 @@
                     <option value="blank"></option>
                     <option value="masala-chai">Masala Chai - $0.75</option>
                     <option value="black-coffee">Black Coffee - $0.50</option>
+                    <option value="milk-coffee">Milk Coffee - $0.60</option>
                     <option value="coffee-shake">Coffee Shake - $0.75</option>
                     <option value="green-tea">Green Tea - $0.50</option>
-                    <option value="beer">Beer - $1.25</option>
-                    <option value="scotch">Scotch - $1.50</option>
+                    <option value="beer">Beer - $1.00</option>
+                    <option value="scotch">Scotch - $1.25</option>  
+                    <option value="coke">Coke - $0.40 (OUT OF STOCK)</option>  
+                    <option value="fbi">Fried Banana Ice Cream - $4.00</option>                
                     <!-- <option value="snacks-and-drinks">More Coming Soon!</option> -->
                 </select>
                 <br>
                 <br>
 
-                <label for="amount">Amount (1-10):</label>
+                <label for="amount">Quantity (1-10):</label>
                 <input type="number" name="amount" id="amount" min="1" max="10" required>
                 <br>
                 <br>
@@ -42,6 +45,11 @@
 
                 <label for="tip">Tip %:</label>
                 <input type="number" name="tip" id="tip" min="0" step="5">
+                <br>
+                <br>
+                <label for="additional_instructions">Instructions:</label>
+                <textarea id="additional_instructions" name="additional_instructions" rows="2" cols="21"></textarea>
+                <br>
                 <br>
                 <br>
                 <br>
