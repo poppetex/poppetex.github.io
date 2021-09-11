@@ -1,39 +1,53 @@
 const menu = {
     'masala-chai': {
         order: 'Masala Chai',
-        cost: 0.75
+        cost: 0.95,
+        etd: [5, 10]
     }, 
     'black-coffee': {
         order: 'Black Coffee',
-        cost: 0.5
+        cost: 0.75,
+        etd: [1, 3]
     },
     'coffee-shake': {
         order: 'Coffee Shake',
-        cost: 0.75
+        cost: 0.9,
+        etd: [2, 5]
     },
     'green-tea': {
         order: 'Green Tea',
-        cost: 0.5
+        cost: 0.75,
+        etd: [1, 3]
     },
     'beer': {
         order: 'Beer',
-        cost: 1.25
+        cost: 1.15,
+        etd: [1, 3]
     },
     'scotch': {
         order: 'Scotch',
-        cost: 1.5
+        cost: 1.25, 
+        etd: [2, 5]
     },
     'milk-coffee': {
         order: 'Milk Coffee',
-        cost: 0.6
+        cost: 0.80,
+        etd: [2, 5]
     },
     'coke': {
         order: 'Coke',
-        cost: 0.4
+        cost: 0.50,
+        etd: [1, 3]
     },
     'fbi': {
         order: 'Fried Banana Ice Cream',
-        cost: 4
+        cost: 4,
+        etd: [30, 45]
+    },
+    'mango-lassi': {
+        order: 'Mango Lassi',
+        cost: 0.9,
+        etd: [2, 5]
     }
 }
 
@@ -69,6 +83,7 @@ form.addEventListener("submit", (event) => {
     }
 
     const costPerDrink = menu[drinkType].cost;
+    const etd = menu[drinkType].etd;
 
     function calculateCost(perDrink, amt, tip) {
         const preTip = perDrink * amt;
@@ -87,6 +102,6 @@ form.addEventListener("submit", (event) => {
     const returnButton = document.getElementById("return_home");
     returnButton.style.display = 'initial';
 
-    alert(`You placed your order! Drink: ${menu[drinkType].order}. Amount ${amount}. Cost: $${totalCost}.`);
+    alert(`You placed your order! Drink: ${menu[drinkType].order}. Amount ${amount}. Cost: $${totalCost}. Estimated delivery time: ${etd[0]}-${etd[1]}min.`);
     event.preventDefault();
 })
