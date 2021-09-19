@@ -262,6 +262,10 @@ main {
     color: lightgreen;
 }
 
+.type_of_special_tea {
+    display: none;
+}
+
 
 
 

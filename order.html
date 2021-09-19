@@ -10,7 +10,6 @@
     </head>
 
     <body>
-
         <main>
             <form class="drink_form" id="drink_form">
                 <h2 class="order_page_h2">Place Your Order Here!</h2>
@@ -29,13 +28,25 @@
                     <option value="coke">Coke - $0.50 (OUT OF STOCK)</option>  
                     <option value="fbi">Fried Banana Ice Cream - $4.00</option>  
                     <option value="mango-lassi">Mango Lassi - $0.90</option>              
-                    <!-- <option value="snacks-and-drinks">More Coming Soon!</option> -->
+                    <option value="specialty-tea">Specialty Tea - $0.80</option>
                 </select>
                 <br>
                 <br>
+                <label class="type_of_special_tea" for="type_of_special_tea">Type of Tea:</label>
+                <select class="type_of_special_tea" id="type_of_special_tea" name="type_of_special_tea">
+                    <option value="organic-peppermint">Organic Pepperment</option>
+                    <option value="assam">Assam</option>
+                    <option value="lemon-orange">Lemon & Orange</option>
+                    <option value="earl-grey">Earl Grey</option>
+                    <option value="decaf-breakfast">Decaffeinated Breakfast</option>
+                    <option value="english-breakfast">English Breakfast</option>
+                    <option value="chamomile">Organic Chamomile</option>
+                </select>
+                <br class="type_of_special_tea">
+                <br class="type_of_special_tea">
 
-                <label for="amount">Quantity (1-10):</label>
-                <input type="number" name="amount" id="amount" min="1" max="10" required>
+                <label for="amount">Quantity:</label>
+                <input type="number" name="amount" id="amount" min="1" required>
                 <br>
                 <br>
 
@@ -65,14 +76,11 @@
                 <h2 class="order_page_h2">Total: $<span id="cost_span">0.00</span></h2>
                 <h3><a id="return_home" href="./index.html">Return to home</a></h3>
             </form>
-
-    
         </main>
         
         <script src="app.js" charset="utf-8" defer></script>
         <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-        </script>
         </script>
     </body>
 </html>
